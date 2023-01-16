@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agens",
+  "info": {
+    "singularName": "agen",
+    "pluralName": "agens",
+    "displayName": "agen",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kode_agen": {
+      "type": "string"
+    },
+    "nama": {
+      "type": "string"
+    },
+    "nomor_hp": {
+      "type": "biginteger"
+    },
+    "alamat": {
+      "type": "richtext"
+    },
+    "produks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produk.produk",
+      "mappedBy": "agen"
+    }
+  }
+}
